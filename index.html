@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Главная страница</title>
+
+  <link rel="stylesheet" href="resources/css/style.css" />
+  <link rel="shortcut icon" type="image/jpg" href="resources/img/logo.jpg" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="page">
+    <!-- HEADER-->
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light">
+        <button type="submit" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">SaveMoney</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="income.html">Доходы</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="consumption.html">Расходы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-nav">
+          <div class="my-2">
+            <a href="authorization.html">
+              <button type="submit" class="btn btn-light my-2 my-sm-0">Войти</button>
+            </a>
+            <a href="registration.html">
+              <button type="submit" class="btn btn-dark my-2 my-sm-0">Регистрация</button>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+    <!--BODY-->
+    <main class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!--Center-->
+          <div class="col-sm-12 col-lg-4 col-md-4 order-lg-2 order-md-2 order-sm-1 py-3">
+            <div class="img-container">
+              <img src="resources/img/logo.jpg">
+            </div>
+          </div>
+
+          <!--Left column-->
+          <div class="col-sm-12 col-lg-4 col-md-4 order-lg-1 order-md-1 order-sm-2 py-3">
+            <div class="py-3">
+              <h4>Советы</h4>
+              <div class="card my-3">
+                <div class="card-body">
+                  <h1>Совет 1</h1>
+                  <p>Экономия семейного бюджета подразумевает сокращение расходов, например, на одежду или еду. Прежде
+                    чем сокращать расходы, нужно определить, есть ли вообще такая возможность.</p>
+                </div>
+              </div>
+              <div class="card my-3">
+                <div class="card-body">
+                  <h1>Совет 2</h1>
+                  <p>Если фиксировать все расходы семьи в течение месяца, то можно понять, какие статьи семейного
+                    бюджета самые затратные или бесполезные. Например, вы можете «внезапно» осознать, что походы по
+                    ресторанам и кафе «съедают» значительную часть доходов. Или вы поймете, что от некоторых продуктов
+                    можно вполне отказаться без потери качества питания семьи.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Right column-->
+          <div class="col-sm-12 col-lg-4 col-md-4 order-lg-3 order-md-3 order-sm-3 py-3">
+            <div class="py-3">
+              <h4>Что нового</h4>
+              <div class="card my-3">
+                <div class="card-body">
+                  <h1>Update 1</h1>
+                  <p>Сломали</p>
+                </div>
+              </div>
+              <div class="card my-3">
+                <div class="card-body">
+                  <h1>Update 2</h1>
+                  <p>Починили</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--FOOTER-->
+
+    <footer class="pt-3 border-top">
+      <div class="navbar-fixed-bottom row-fluid">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="social-net">
+              <div class="col-1">
+                <a href="#">
+                  <img class="mb-5" src="resources/img/youtube.png" width="50" height="50" alt="Youtube">
+                </a>
+              </div>
+            </div>
+            <div class="social-net">
+              <div class="col-1">
+                <a href="#">
+                  <img class="mb-5" src="resources/img/VK.png" width="50" height="50" alt="VK">
+                </a>
+              </div>
+            </div>
+            <div class="social-net">
+              <div class="col-1">
+                <a href="#">
+                  <img class="mb-5" src="resources/img/telegram.png" width="50" height="50" alt="Telegram">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

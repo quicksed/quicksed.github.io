@@ -1,0 +1,61 @@
+<!--В ходе выполнения 4 лабы эта форма будет преобразована в модальное окно-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Добавление нового элемента</title>
+    <link rel="shortcut icon" type="image/jpg" href="resources/img/logo.jpg"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>    
+</head>
+
+<body>
+    <div class="container col-lg-4 col-md-6 my-2">
+        <from role="form">
+            <div class="form-group">
+                <label for="item">Запись</label>
+                <input class="form-control" id="item" type="text" placeholder="Запись">
+            </div>
+            <div class="form-group">
+                <label for="dateCreate">Дата</label>
+                <input class="form-control" id="dateCreate" type="date" placeholder="Дата">
+            </div>
+            <div class="form-group">
+                <label for="selectCategory">Категория</label>
+                <select class="form-control" id="selectCategory">
+                    <option value="I1">Зарплата</option>
+                    <option value="I2">Пассивный доход</option>
+                    <option value="I3">Прочее</option>
+                    <option value="C1">Автомобиль</option>
+                    <option value="C1">Еда</option>
+                    <option value="C1">Одежда</option>
+                    <option value="C1">Комунальные услуги</option>
+                    <option value="C1">Прочее</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sum">Сумма</label>
+                <input class="form-control" id="sum" type="number" placeholder="Сумма">
+            </div>
+            <div class="my-2">
+                <a href="index.html">
+                    <button type="submit" class="btn btn-primary">Добавить</button>
+                </a>
+            </div>
+        </from>
+    </div>
+</body>
+
+</html>
