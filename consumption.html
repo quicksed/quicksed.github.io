@@ -11,6 +11,25 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
         integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(76227355, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/76227355" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -21,6 +40,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 
 <body>
@@ -122,12 +142,60 @@
                                     <td>4.02.2021</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="5" align="center"><a href="addNewItemForm.html">
+                                    <td colspan="5" align="center">
+                                        <a data-toggle="modal" data-target="#addItem">
                                             <i class="fa fa-plus-circle icon-plus" aria-hidden="true"></i>
-                                            Добавить новую запись</a></td>
+                                            Добавить новую запись</a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="addItem" tabindex="-1" role="dialog" aria-labelledby="addItemModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addItemLabel">
+                                    Добавить новую категорию
+                                </h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <from role="form">
+                                    <div class="form-group">
+                                        <label for="item">Запись</label>
+                                        <input class="form-control" id="item" type="text" placeholder="Запись">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dateCreate">Дата</label>
+                                        <input class="form-control" id="dateCreate" type="date" placeholder="Дата">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="selectCategory">Категория</label>
+                                        <select class="form-control" id="selectCategory">
+                                            <option value="C1">Автомобиль</option>
+                                            <option value="C1">Еда</option>
+                                            <option value="C1">Одежда</option>
+                                            <option value="C1">Комунальные услуги</option>
+                                            <option value="C1">Прочее</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sum">Сумма</label>
+                                        <input class="form-control" id="sum" type="number" placeholder="Сумма">
+                                    </div>
+                                </from>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                <button type="submit" class="btn btn-primary">Добавить</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -176,12 +244,43 @@
                                     <td>85000</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" align="center"><a href="addNewCategoryForm.html">
+                                    <td colspan="3" align="center">
+                                        <a data-toggle="modal" data-target="#addCategory">
                                             <i class="fa fa-plus-circle icon-plus" aria-hidden="true"></i>
-                                            Добавить новую категорию</a></td>
+                                            Добавить новую категорию</a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="addCategoryModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addCategoryLabel">
+                                    Добавить новую категорию
+                                </h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <from role="form">
+                                    <div class="form-group">
+                                        <label for="category">Название категории</label>
+                                        <input class="form-control" id="category" type="text"
+                                            placeholder="Название категории">
+                                    </div>
+                                </from>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                <button type="submit" class="btn btn-primary">Добавить</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
