@@ -41,6 +41,11 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Load d3.js and c3.js -->
+    <script src="https://unpkg.com/d3@5.12.0/dist/d3.min.js"></script>
+    <link href="https://unpkg.com/c3@0.7.11/c3.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/c3@0.7.11/c3.min.js"></script>
 </head>
 
 <body>
@@ -66,7 +71,7 @@
                     </ul>
                 </div>
                 <div class="navbar-nav">
-                    <div class="my-2">
+                    <div>
                         <a href="authorization.html">
                             <button type="submit" class="btn btn-light my-2 my-sm-0">Войти</button>
                         </a>
@@ -78,13 +83,13 @@
             </nav>
         </header>
 
+        <!--MAIN-->
         <main class="content">
             <div class="container-fluid">
                 <div class="row mx-1">
                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 py-3">
-                        <div class="img-container">
-                            <img src="resources/img/consumption.png" alt="consumption" />
-                        </div>
+                        <div id="consumptionChart"></div>
+                        <script src="resources/js/charts.js"></script>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 py-3">
                         <h4>Записи</h4>
@@ -166,7 +171,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <from role="form">
+                                <form role="form">
                                     <div class="form-group">
                                         <label for="item">Запись</label>
                                         <input class="form-control" id="item" type="text" placeholder="Запись">
@@ -189,7 +194,7 @@
                                         <label for="sum">Сумма</label>
                                         <input class="form-control" id="sum" type="number" placeholder="Сумма">
                                     </div>
-                                </from>
+                                </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
@@ -268,13 +273,13 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <from role="form">
+                                <form role="form">
                                     <div class="form-group">
                                         <label for="category">Название категории</label>
                                         <input class="form-control" id="category" type="text"
                                             placeholder="Название категории">
                                     </div>
-                                </from>
+                                </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
