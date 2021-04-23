@@ -15,7 +15,7 @@ form.addEventListener("formdata", event => {
     let password = data.get("password");
     let repeatedPassword = data.get("repeatPassword");
 
-    if (email.length == 0 || password == 0 || repeatedPassword == 0) {
+    if (email.length == 0 || password.lenght == 0 || repeatedPassword.lenght == 0) {
         Swal.fire('Одно из полей не заполнено!', 'Проверьте введенные данные', 'error');
         return;
     }
@@ -23,7 +23,7 @@ form.addEventListener("formdata", event => {
         Swal.fire('Пароли не совпадают!', '', 'error');
         return;
     }
-    if (password < 8) {
+    if (password.length < 8) {
         Swal.fire('Пароль слишком короткий!', '', 'warning');
         return;
     }
