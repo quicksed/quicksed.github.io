@@ -46,6 +46,12 @@
     <script src="https://unpkg.com/d3@5.12.0/dist/d3.min.js"></script>
     <link href="https://unpkg.com/c3@0.7.11/c3.min.css" rel="stylesheet">
     <script src="https://unpkg.com/c3@0.7.11/c3.min.js"></script>
+
+    <!--Datepicker-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <body>
@@ -89,7 +95,59 @@
                 <div class="row mx-1">
                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 py-3">
                         <div id="consumptionChart"></div>
-                        <script src="resources/js/charts.js"></script>
+                        <div class="input-group mb-3 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div id="reportRange" class="pull-right"
+                                style="background: rgb(255, 255, 255); cursor: pointer; padding: 5px 10px; border: 1px solid rgb(204, 204, 204); width: 100%;">
+                                <i class="fa fa-calendar"></i>&nbsp;
+                                <span></span> <i class="fa fa-caret-down"></i>
+                                <script src="resources/js/chartsAndDatePicker.js"></script>
+                            </div>
+                        </div>
+                        <script src="resources/js/chartsAndDatePicker.js"></script>
+                        <h4>Категории</h4>
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">№</th>
+                                    <th scope="col">Имя категории</th>
+                                    <th scope="col">Сумма</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</th>
+                                    <td>Автомобиль</td>
+                                    <td>10000</td>
+                                </tr>
+                                <tr>
+                                    <td>2</th>
+                                    <td>Еда</td>
+                                    <td>15000</td>
+                                </tr>
+                                <tr>
+                                    <td>3</th>
+                                    <td>Одежда</td>
+                                    <td>10000</td>
+                                </tr>
+                                <tr>
+                                    <td>4</th>
+                                    <td>Коммунальные услуги</td>
+                                    <td>6500</td>
+                                </tr>
+                                <tr>
+                                    <td>5</th>
+                                    <td>Прочее</td>
+                                    <td>85000</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" align="center">
+                                        <a data-toggle="modal" data-target="#addCategory">
+                                            <i class="fa fa-plus-circle icon-plus" aria-hidden="true"></i>
+                                            Добавить новую категорию</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 py-3">
                         <h4>Записи</h4>
@@ -205,59 +263,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                        <div class="input-group mb-3 col-lx-12 col-lg-12 col-md-12 col-sm-12">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon3"></span>
-                            </div>
-                            <input type="date" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                        </div>
 
-                        <h4>Категории</h4>
-                        <table class="table table-bordered table-striped">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">№</th>
-                                    <th scope="col">Имя категории</th>
-                                    <th scope="col">Сумма</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</th>
-                                    <td>Автомобиль</td>
-                                    <td>10000</td>
-                                </tr>
-                                <tr>
-                                    <td>2</th>
-                                    <td>Еда</td>
-                                    <td>15000</td>
-                                </tr>
-                                <tr>
-                                    <td>3</th>
-                                    <td>Одежда</td>
-                                    <td>10000</td>
-                                </tr>
-                                <tr>
-                                    <td>4</th>
-                                    <td>Коммунальные услуги</td>
-                                    <td>6500</td>
-                                </tr>
-                                <tr>
-                                    <td>5</th>
-                                    <td>Прочее</td>
-                                    <td>85000</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" align="center">
-                                        <a data-toggle="modal" data-target="#addCategory">
-                                            <i class="fa fa-plus-circle icon-plus" aria-hidden="true"></i>
-                                            Добавить новую категорию</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
 
                 <div class="modal fade" id="addCategory" tabindex="-1" role="dialog" aria-labelledby="addCategoryModal"
