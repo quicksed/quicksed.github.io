@@ -1,4 +1,4 @@
-let form = document.forms[0];
+let form = document.getElementById("registrationForm");
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
